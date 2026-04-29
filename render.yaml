@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: stremio-1flex-addon
+    env: node
+    region: oregon
+    plan: free
+    buildCommand: npm install
+    startCommand: node index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        generateValue: false
+        value: "10000"
+    healthCheckPath: /manifest.json
+    autoDeploy: true
