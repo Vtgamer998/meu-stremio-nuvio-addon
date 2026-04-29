@@ -1,0 +1,96 @@
+module.exports = {
+  id: "com.nuvio.addon.v2",
+  version: "2.0.0",
+  name: "🎬 Nuvio Addon",
+  description:
+    "Filmes, Séries, Animes e TV ao vivo via TMDB + VidSrc + Embed.su + SuperFlix",
+  logo: "https://i.imgur.com/YOUR_LOGO.png",
+  background: "https://i.imgur.com/YOUR_BG.png",
+  resources: ["catalog", "meta", "stream"],
+  types: ["movie", "series", "anime", "channel"],
+  idPrefixes: ["tt", "tmdb:", "tv:"],
+  catalogs: [
+    // ─── FILMES ───────────────────────────────────────────
+    {
+      type: "movie",
+      id: "filmes-populares",
+      name: "🎬 Filmes Populares",
+      extra: [
+        { name: "genre", isRequired: false },
+        { name: "search", isRequired: false },
+        { name: "skip", isRequired: false },
+      ],
+    },
+    {
+      type: "movie",
+      id: "filmes-tendencia",
+      name: "🔥 Filmes em Alta",
+      extra: [
+        { name: "skip", isRequired: false },
+      ],
+    },
+    {
+      type: "movie",
+      id: "filmes-lancamentos",
+      name: "🆕 Lançamentos",
+      extra: [
+        { name: "skip", isRequired: false },
+      ],
+    },
+
+    // ─── SÉRIES ───────────────────────────────────────────
+    {
+      type: "series",
+      id: "series-populares",
+      name: "📺 Séries Populares",
+      extra: [
+        { name: "genre", isRequired: false },
+        { name: "search", isRequired: false },
+        { name: "skip", isRequired: false },
+      ],
+    },
+    {
+      type: "series",
+      id: "series-tendencia",
+      name: "🔥 Séries em Alta",
+      extra: [
+        { name: "skip", isRequired: false },
+      ],
+    },
+
+    // ─── ANIMES ───────────────────────────────────────────
+    {
+      type: "anime",
+      id: "animes-populares",
+      name: "⛩️ Animes Populares",
+      extra: [
+        { name: "genre", isRequired: false },
+        { name: "search", isRequired: false },
+        { name: "skip", isRequired: false },
+      ],
+    },
+    {
+      type: "anime",
+      id: "animes-tendencia",
+      name: "🔥 Animes em Alta",
+      extra: [
+        { name: "skip", isRequired: false },
+      ],
+    },
+
+    // ─── TV AO VIVO ───────────────────────────────────────
+    {
+      type: "channel",
+      id: "tv-ao-vivo",
+      name: "📡 TV Ao Vivo",
+      extra: [
+        { name: "search", isRequired: false },
+        { name: "genre", isRequired: false },
+      ],
+    },
+  ],
+  behaviorHints: {
+    adult: false,
+    p2p: false,
+  },
+};
