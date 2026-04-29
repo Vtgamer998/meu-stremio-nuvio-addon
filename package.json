@@ -1,0 +1,32 @@
+{
+  "name": "stremio-1flex-addon",
+  "version": "1.0.0",
+  "description": "Addon Stremio para 1flex.org — filmes, séries e animes",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "stremio-addon-sdk": "^1.6.10",
+    "axios": "^1.6.7",
+    "cheerio": "^1.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.3"
+  },
+  "keywords": [
+    "stremio",
+    "addon",
+    "1flex",
+    "filmes",
+    "series",
+    "anime",
+    "brasil"
+  ],
+  "author": "Vt",
+  "license": "MIT"
+}
